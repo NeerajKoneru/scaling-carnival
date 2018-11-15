@@ -14,9 +14,24 @@ fptr=fopen("a.txt","r");
 
     // reads text until newline 
     fscanf(fptr,"%[^\n]", c);
-
+    if(strlen(c)<100)
+{
     printf("Data from the file:\n%s", c);
     fclose(fptr);
+    }
+    else
+    {
+    int i=0;
+do
+    {
+        char c = fgetc(fptr); 
+        if (i==100) 
+            break ;
+        printf("%c", c); 
+i++;
+    }  while(1); 
+fclose(fptr);
+}
     
     return 0;
 }
