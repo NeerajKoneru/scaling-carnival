@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+int main(void)
+{
+  char s[256];
+  int i;
+  fgets(s, 256, stdin);
+  i = strlen(s)-1;
+  if( s[ i ] == '\n') 
+      s[i] = '\0';
+  fputs(s, stdout);
+  return 0;
+}
