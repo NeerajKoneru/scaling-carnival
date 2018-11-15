@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+   FILE *fptr;
+   char a[40];
+   fr = fopen("w.txt", "w");
+   printf("Enter a string");
+   scanf("%s", a); /*read from keyboard*/
+   fprintf(fr, "%s",a); /*  write to file*/
+   fclose(fr);

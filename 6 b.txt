@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    char s[10];
+    FILE *fptr;
+    int  i;
+    int  n1;
+    char n12;
+    i = 0;
+
+    fptr = fopen("welcome.txt", "w");
+    if (fptr == NULL)
+    {
+        printf("ERROR Creating File!");
+        exit(1);
+    }
+    while (s[i] != '\0')
+    {
+        n1 = rand() % 10;
+        n12 = n1 + '0';
+        s[i] = n12;
+        i += 1;
+    }
+    puts(s);
+    fprintf(fptr,"%s", s);
+    fclose(fptr);
+    return (0);
+}

@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+      int n=0;
+      char fname[30],ch;
+      FILE *fptr;
+      printf("\n Enter file name : ");
+      gets(fname);
+      fptr=fopen(fname,"r");
+      if(fptr==NULL)
+      {
+            printf("\n ");
+            exit(0);
+      }
+      ch=fgetc(fptr);
+      while(ch!=EOF)
+      {
+            if(ch=='$')
+{
+n++;
+}  
+      fclose(fptr);
+printf("%d" ,n);
+      return 0;
+}
